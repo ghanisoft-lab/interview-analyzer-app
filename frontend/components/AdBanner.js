@@ -14,7 +14,8 @@ const AdBanner = ({ slot }) => {
     // Push ad request to Google AdSense
     try {
       if (typeof window !== 'undefined') {
-        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+        // Corrected JavaScript syntax (removed TypeScript 'as any')
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
       }
     } catch (e) {
       console.error("Adsense error", e);
